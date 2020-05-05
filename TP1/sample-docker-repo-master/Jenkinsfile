@@ -29,7 +29,7 @@ node {
                 sh "./mvnw sonar:sonar"
             }
         }*/
-
+//
         stage('packaging') {
             sh "./mvnw package -DskipTests"
             archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
@@ -54,3 +54,4 @@ node {
 
 
 }
+
